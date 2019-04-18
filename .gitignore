@@ -1,0 +1,4 @@
+bin/
+.settings/
+goals.txt
+build/

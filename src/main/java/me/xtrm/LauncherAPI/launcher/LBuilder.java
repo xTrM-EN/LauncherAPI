@@ -1,5 +1,7 @@
 package me.xtrm.LauncherAPI.launcher;
 
+import me.xtrm.LauncherAPI.utils.Logger;
+
 public class LBuilder {
 	
 	private String name, version, updateUrl;
@@ -10,7 +12,7 @@ public class LBuilder {
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		this.name = name.replaceAll(" ", "");
 	}
 	
 	public void setVersion(String version) {
@@ -34,6 +36,7 @@ public class LBuilder {
 	}
 	
 	public LauncherInstance build() {
+		Logger.info("[LBuilder] Building LauncherInstance...");
 		return new LauncherInstance(name, version, updateUrl, forge, shaders, optifine);
 	}
 

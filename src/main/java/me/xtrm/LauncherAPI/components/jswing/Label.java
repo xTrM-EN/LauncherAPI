@@ -1,4 +1,4 @@
-package me.xtrm.LauncherAPI.launcher.swing.components.text;
+package me.xtrm.LauncherAPI.components.jswing;
 
 import java.awt.Color;
 
@@ -11,14 +11,9 @@ public class Label extends JLabel {
 	private int[] bounds;
 	private Color textColor;
 	
-	public Label(String baseText, int x, int y, int width, int height) {
-		this(baseText, new int[] {x, y, width, height}, Color.WHITE);
-	}
-	
-	public Label(String baseText, int[] bounds) {
-		this(baseText, bounds, Color.WHITE);
-	}
-	
+	public Label(String baseText, int x, int y, int width, int height) { this(baseText, new int[] {x, y, width, height}, Color.WHITE); }	
+	public Label(String baseText, int x, int y, int width, int height, Color textColor) { this(baseText, new int[] {x, y, width, height}, textColor); }
+	public Label(String baseText, int[] bounds) { this(baseText, bounds, Color.WHITE); }
 	public Label(String baseText, int[] bounds, Color textColor) {
 		this.text = baseText;
 		this.bounds = bounds;

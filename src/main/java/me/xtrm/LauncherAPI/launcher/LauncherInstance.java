@@ -49,11 +49,11 @@ public class LauncherInstance {
 		return shaders;
 	}
 	
-	public GameType getGameType() {
-		int ver = Integer.parseInt(version.split(".")[1]);
-		
+	public GameType getGameType() {		
 		if(version == "1.7.10")
 			return GameType.V1_7_10;
+		
+		int ver = Integer.parseInt(version.split(".")[1]);
 		
 		if(ver >= 8)
 			return GameType.V1_8_HIGHER;

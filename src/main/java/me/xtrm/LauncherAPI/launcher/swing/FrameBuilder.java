@@ -2,6 +2,7 @@ package me.xtrm.LauncherAPI.launcher.swing;
 
 import me.xtrm.LauncherAPI.launcher.swing.frame.LFrame;
 import me.xtrm.LauncherAPI.launcher.swing.panel.LPanel;
+import me.xtrm.LauncherAPI.utils.Logger;
 import me.xtrm.LauncherAPI.utils.Resource;
 
 public class FrameBuilder {
@@ -31,6 +32,7 @@ public class FrameBuilder {
 	}
 	
 	public LFrame build() {
+		Logger.info("[FrameBuilder] Building LFrame and LPanel...");
 		return new LFrame(name, size, icon, new LPanel(backgroundImg));
 	}
 }
